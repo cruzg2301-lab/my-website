@@ -1,0 +1,230 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  background: linear-gradient(180deg, #1f93bd 0%, #1680ac 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 40px 32px 24px;
+  background-image: url('zimbra background.png');
+  background-size: cover;
+}
+.page-bg {
+  width: min(100%, 520px);
+  max-width: 520px;
+  padding: 0;
+  border-radius: 0;
+  margin: 0 auto;
+}
+.login-card {
+  background: #fff;
+  border-radius: 0;
+  padding: 34px 40px 24px;
+  box-shadow: 0 18px 36px rgba(20, 34, 56, 0.16);
+}
+.top-brand {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.top-brand a {
+  text-decoration: none;
+  color: #0f7fa4;
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+.logo-img {
+  width: 310px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+h1 {
+  margin: 0 0 24px;
+  font-size: clamp(26px, 3.2vw, 34px);
+  color: #25303f;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.login-form label {
+  display: block;
+  font-size: 15px;
+  color: #5f6f82;
+  margin-bottom: 16px;
+}
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 14px 14px;
+  border: 1px solid #dde4ea;
+  border-radius: 0;
+  background: #fff;
+  font-size: 15px;
+  color: #25303f;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.login-form input::placeholder {
+  color: #9aa4b0;
+}
+.login-form input:focus,
+.login-form select:focus {
+  border-color: #3fa9dd;
+  box-shadow: 0 0 0 6px rgba(63, 169, 221, 0.12);
+}
+.password-row {
+  position: relative;
+}
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #2b3b4c;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.primary-btn {
+  appearance: none;
+  border: none;
+  background: #0d7fab;
+  color: #fff;
+  padding: 16px 30px;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  min-width: 120px;
+}
+.primary-btn:hover {
+  background: #0b6b96;
+}
+.stay-signed {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #5f6f82;
+  margin-left: auto;
+}
+.card-footer {
+  background: #f3f5f8;
+  padding: 28px 34px;
+  margin-top: 34px;
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  border-top: 1px solid #d8dbe0;
+}
+.webapp-select {
+  margin: 0;
+}
+.webapp-select label {
+  display: block;
+  margin-bottom: 12px;
+  color: #4b5766;
+  font-size: 14px;
+  font-weight: 600;
+}
+.select-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+.help-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #24303f;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  cursor: default;
+}
+@media (max-width: 840px) {
+  .page-bg {
+    width: min(100%, 760px);
+  }
+  .login-card {
+    padding: 36px 40px 28px;
+  }
+}
+@media (max-width: 560px) {
+  body {
+    padding: 20px;
+  }
+  .page-bg {
+    width: 100%;
+  }
+  .login-card {
+    padding: 24px;
+  }
+  .primary-btn {
+    width: 100%;
+    min-width: 0;
+  }
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .stay-signed {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+  .card-footer {
+    padding: 22px;
+  }
+}
+.copyright-text {
+  margin-top: 22px;
+  padding-top: 0;
+  border-top: none;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.9;
+}
